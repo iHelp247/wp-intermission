@@ -1,0 +1,17 @@
+# iHelp247 WP Intermission - (c) ULXI - UnLimited eXchange, Inc. - published under the iHelp247 brand - https://ihelp247.com - GPL-2.0-or-later
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Build artifacts / release zips (attach zips to GitHub Releases, don't commit them)
+*.zip
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# Tooling (if ever added)
+node_modules/
+vendor/

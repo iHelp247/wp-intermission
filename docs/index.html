@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- iHelp247 WP Intermission - (c) ULXI - UnLimited eXchange, Inc. - published under the iHelp247 brand - https://ihelp247.com - GPL-2.0-or-later -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iHelp247 WP Intermission — User Guide &amp; Support</title>
+<style>
+  :root { --ink:#1d2327; --soft:#50575e; --line:#dcdcde; --accent:#2271b1; --bg:#f6f7f7; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+  header { background:#000510; color:#fff; padding:40px 20px; text-align:center; }
+  header h1 { margin:0 0 6px; font-weight:500; letter-spacing:1px; }
+  header p { margin:0; color:rgba(255,255,255,0.7); }
+  nav { background:#fff; border-bottom:1px solid var(--line); padding:10px 20px; text-align:center; position:sticky; top:0; }
+  nav a { color:var(--accent); text-decoration:none; margin:0 12px; font-size:14px; }
+  main { max-width:860px; margin:0 auto; padding:30px 20px 60px; }
+  section { background:#fff; border:1px solid var(--line); border-radius:6px; padding:24px 28px; margin-bottom:24px; }
+  h2 { margin-top:0; font-size:22px; }
+  h3 { font-size:16px; margin-bottom:6px; }
+  code { background:var(--bg); border:1px solid var(--line); border-radius:3px; padding:1px 6px; font-size:0.92em; }
+  .q { font-weight:600; margin:18px 0 4px; }
+  .a { margin:0 0 4px; color:var(--soft); }
+  .tip { border-left:3px solid var(--accent); padding:8px 14px; background:#f0f6fb; margin:14px 0; border-radius:0 4px 4px 0; }
+  footer { text-align:center; color:var(--soft); font-size:13px; padding:20px; }
+  footer a { color:var(--accent); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>iHelp247 WP Intermission</h1>
+  <p>Maintenance &amp; coming-soon pages for WordPress — an intermission for your site, easy by default, powerful when you need it.<br><small>An iHelp247 project — by ULXI</small></p>
+</header>
+
+<nav>
+  <a href="#start">Getting started</a>
+  <a href="#designer">Designer</a>
+  <a href="#countdown">Countdown</a>
+  <a href="#advanced">Advanced</a>
+  <a href="#help">Self-diagnosis</a>
+  <a href="#remove">Removing</a>
+</nav>
+
+<main>
+
+<section id="start">
+  <h2>Getting started (two minutes)</h2>
+  <p>Install and activate the plugin, then open <strong>Settings → WP Intermission</strong>. Tick <strong>Enabled</strong> and press <strong>Save Changes</strong>. That's it — visitors now see a polished maintenance page, while <em>you</em> (and anyone who can edit content) still see the normal site, with a red <strong>MAINTENANCE ON</strong> badge in the admin bar so nobody forgets.</p>
+  <div class="tip">Because logged-in editors always see the live site, check your maintenance page in a <strong>private/incognito window</strong> — that's what visitors get.</div>
+  <h3>Response code — which one?</h3>
+  <p><strong>503</strong> for short maintenance (hours or days): search engines understand it's temporary and change nothing. <strong>200</strong> for an extended coming-soon page that should behave like a normal page. When unsure, 503.</p>
+</section>
+
+<section id="designer">
+  <h2>Designer — build the page without code</h2>
+  <p>Designer is the default page source: simple fields on the left, a live preview on the right, rendered inside a monitor, laptop, or phone at true scale — what you see is what visitors get. Nothing changes on the live site until you press <strong>Save Changes</strong>.</p>
+  <h3>Background</h3>
+  <p>Pick an image from the Media Library, or choose a style: the stock dark gradient, a solid color, or a two-color gradient. The <strong>Glass effect</strong> checkbox adds the dark overlay and blur that make text readable over photos — turn it <em>off</em> for light designs.</p>
+  <h3>Text</h3>
+  <p>Title, subtitle, and main text each have their own size and color. <code>{{SITE_NAME}}</code> in any field becomes your site's name automatically; <code>{{YEAR}}</code> becomes the current year. Leave the subtitle empty to hide it.</p>
+  <h3>Fonts</h3>
+  <p>The title and the body text each get their own font, three ways: <strong>System</strong> (native look, fastest, zero external calls — pick a style from the dropdown), <strong>Google Font</strong> (start typing a name and pick from suggestions shown in their real face; note visitors' browsers will contact Google, which matters under GDPR), or <strong>Self-hosted</strong> (upload a <code>.woff2</code> file through the Media Library — right for licensed or custom brand fonts; nothing leaves your server).</p>
+  <h3>Disclaimer</h3>
+  <p>Optional footer legal text. The <strong>Insert standard no-collection wording</strong> button adds vetted language for a page that collects nothing — edit it freely, and have counsel review anything site-specific.</p>
+</section>
+
+<section id="countdown">
+  <h2>Countdown &amp; launching</h2>
+  <p>Tick <strong>Enable countdown</strong> and set a target date and time (your site's timezone). Designer shows the timer automatically; in the other modes, put <code>{ihelp-wp-countdown}</code> wherever you want it. Unticking the checkbox hides the timer <em>without</em> losing your date. Style it with the shape (squares, rounded, circles), digit color, and its own font — digital-looking faces such as Orbitron, VT323, or Share Tech Mono suit it well, and the monospace system option guarantees rock-steady digits.</p>
+  <p><strong>At zero</strong>, choose what happens: keep showing 00s, hide the countdown, or <strong>take the site live</strong> — maintenance mode switches itself off at T-0 and visitors watching the countdown refresh into the live site. The settings page warns you in red if you pick "take the site live" with a date that's already in the past (saving would end maintenance immediately).</p>
+  <p><strong>Bold and italics:</strong> type <code>&lt;strong&gt;</code> or <code>&lt;em&gt;</code> around words in any text field. New lines in the main text and disclaimer become line breaks automatically. Note that Google or self-hosted fonts load in one weight — browsers simulate bold/italic for them, which looks fine for a word or two; system fonts use their true bold and italic faces.</p>
+</section>
+
+<section id="advanced">
+  <h2>Advanced (for power users — safely ignorable)</h2>
+  <h3>Other page sources</h3>
+  <p><strong>Styled template + content editor</strong>: edit just the content with the WordPress editor inside the stock design. <strong>Full custom HTML</strong>: paste a complete HTML document and it's served byte-for-byte — your styles, your everything. Tokens work in all modes.</p>
+  <h3>Core-update coverage</h3>
+  <p>While WordPress updates itself, plugins can't run — WordPress shows a plain "Briefly unavailable" text instead. Tick this and the plugin generates <code>wp-content/maintenance.php</code>, a snapshot of your page that WordPress serves during those windows. It regenerates on every save and is removed if you deactivate the plugin.</p>
+  <h3>Database-failure coverage</h3>
+  <p>Same idea for the "Error establishing a database connection" screen: your branded page (with a 503) instead of the bare error. Leave it off in development environments where you want raw errors visible.</p>
+  <h3>The corner credit</h3>
+  <p>The served page carries a small "intermission by iHelp247" link in the bottom-right corner. Don't want it? Tick the checkbox at the bottom of the settings page and it's gone — free either way; the link just helps others find the plugin. And if WP Intermission is earning its keep, the buttons next to that checkbox are how you tell us to keep building: a review, or a coffee (one-time or monthly — checkout opens in a new tab).</p>
+  <h3>Force overwrite (foreign files)</h3>
+  <p>If another tool owns <code>wp-content/maintenance.php</code> or <code>db-error.php</code> and you can't remove it, the <strong>Force overwrite</strong> checkbox (inside the Core-update coverage section) replaces those files when you save — with a snapshot of your designed page, never a generic screen — and it switches core-update coverage on for you. Treat it as unreliable: the file is only checked and replaced at save time — it is not monitored, and the other tool can put its copy back whenever it likes. One owner per site is still the clean fix.</p>
+  <h3>Developers</h3>
+  <p>Filters: <code>ihelp247_wp_intermission_bypass</code>, <code>ihelp247_wp_intermission_html</code>, <code>ihelp247_wp_intermission_template_path</code>, <code>ihelp247_wp_intermission_assets_url</code>, <code>ihelp247_wp_intermission_docs_url</code>. Template override: <code>wp-content/wp-intermission/template.html</code>. All tunables are constants at the top of the main plugin file. Updates arrive from GitHub Releases through the normal Plugins screen.</p>
+</section>
+
+<section id="help">
+  <h2>Self-diagnosis — when something looks wrong</h2>
+
+  <p class="q">"I enabled it, but I still see my normal site."</p>
+  <p class="a">Working as designed — logged-in editors always see the live site. Open a private/incognito window, or use the <strong>Preview</strong> link on the settings page.</p>
+
+  <p class="q">"Visitors still see the old page after I saved changes."</p>
+  <p class="a">A cache is serving the old copy. If you use Cloudflare or a caching plugin, purge it. The plugin itself sends no-cache headers, so once purged it stays fresh.</p>
+
+  <p class="q">"The core-update checkbox is blocked with a red message."</p>
+  <p class="a">Another tool (often a hosting control panel's maintenance feature) owns <code>wp-content/maintenance.php</code>. This plugin doesn't overwrite other tools' files by default. Turn the other maintenance feature off, delete that file, and save again — or tick <strong>Force overwrite</strong> in the Core-update coverage section (see Advanced), accepting that the other tool can recreate its file at any time. Note: some tools leave the file in place even when their maintenance is off.</p>
+
+  <p class="q">"My Google Font isn't applying."</p>
+  <p class="a">The family name must match exactly. Use the suggestion dropdown — type two letters and click the name rendered in its real face. If a rare font isn't in the suggestions, copy the exact name from fonts.google.com.</p>
+
+  <p class="q">"The countdown hit zero but the site didn't go live."</p>
+  <p class="a">The countdown is display-only unless <strong>At zero</strong> is set to <strong>take the site live</strong> on the settings page.</p>
+
+  <p class="q">"The preview looks different from the live page."</p>
+  <p class="a">The preview shows <em>unsaved</em> edits; the live page shows the last save. If they differ, you probably haven't saved yet.</p>
+
+  <p class="q">"Something went wrong — will my site white-screen?"</p>
+  <p class="a">No. The plugin fails open: if its page can't be built for any reason, it steps aside and your normal site serves. Maintenance mode can never take your site down.</p>
+
+  <p class="q">Still stuck?</p>
+  <p class="a">Open an issue on the <a href="https://github.com/iHelp247/wp-intermission/issues">GitHub repository</a>. For security concerns, use the repository's private vulnerability reporting instead of a public issue.</p>
+</section>
+
+<section id="remove">
+  <h2>Removing the plugin</h2>
+  <p><strong>Deactivate</strong> stops everything and removes any generated <code>maintenance.php</code> / <code>db-error.php</code> files. <strong>Delete</strong> additionally removes all saved settings. Your uploaded media stays in the Media Library — it's yours.</p>
+</section>
+
+</main>
+
+<footer>
+  iHelp247 WP Intermission is free software (GPL-2.0-or-later), published by iHelp247 — the open-source brand of <a href="https://ulxi.com">ULXI — UnLimited eXchange, Inc.</a>, owner of the brand and the software. Support: <a href="https://ihelp247.com">ihelp247.com</a> · It collects nothing: no cookies, no analytics, no phoning home.
+</footer>
+
+</body>
+</html>
