@@ -1,11 +1,11 @@
 === iHelp247 WP Intermission ===
 Contributors: ihelp247, ulxi
-Donate link: https://ihelp247.com
+Donate link: https://square.link/u/NSPL6UTY
 Tags: maintenance mode, coming soon, 503, under construction, countdown
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.5.2
+Stable tag: 1.5.3
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,6 +56,9 @@ Tick the checkbox at the bottom of the settings page. It's free and stays free â
 4. Power users: switch Page source to the styled template or full custom HTML; developers can override the template at wp-content/wp-intermission/template.html.
 
 == Changelog ==
+
+= 1.5.3 =
+* Support row: wired in the live checkout link (one button â€” any amount, one-time or monthly, chosen at checkout), added a Support link (ihelp247.com/support), and matched the language to the checkout page. No functional changes to the served page or settings behavior.
 
 = 1.5.2 =
 * Documentation and language pass across the plugin, readmes, and user guide to match the published project narrative. Introduced a separate WordPress.org submission build (identical plugin, with the GitHub self-update mechanism removed, as directory rules require). No functional changes to the served page, settings, or behavior.

@@ -47,11 +47,11 @@ Placeholders available in any template:
 
 ## Configuration
 
-Every tunable is a constant at the top of `wp-intermission.php`, in one labeled block: bypass capability, Retry-After seconds, option names, override folder, and the Support-row links (the two Square checkout URLs live there — replace the placeholders when the links are generated). Developers can also use the `ihelp247_wp_intermission_bypass`, `ihelp247_wp_intermission_html`, `ihelp247_wp_intermission_template_path`, `ihelp247_wp_intermission_assets_url`, and `ihelp247_wp_intermission_docs_url` filters.
+Every tunable is a constant at the top of `wp-intermission.php`, in one labeled block: bypass capability, Retry-After seconds, option names, override folder, and the Support-row links (the Square checkout URL and the ihelp247.com/support link live there). Developers can also use the `ihelp247_wp_intermission_bypass`, `ihelp247_wp_intermission_html`, `ihelp247_wp_intermission_template_path`, `ihelp247_wp_intermission_assets_url`, and `ihelp247_wp_intermission_docs_url` filters.
 
 ## Supporting the project
 
-The settings page ends with a low-key Support row: if someone has tried the plugin and it's earning its keep, they can leave a review or buy us a coffee — one-time ($5 default, any amount at checkout) or monthly ($5/month default). Both open in a new tab so nobody loses their work. Next to it sits the checkbox that removes the corner credit from the served page — deliberately together and deliberately free: find, try, see value, let us know to keep going. The `assets/` folder ships the iHelp247 wordmark as dark and light SVGs.
+The settings page ends with a low-key Support row: if someone has tried the plugin and it's earning its keep, they can leave a review or keep the energy drinks and coffee flowing — one Square checkout, any amount, one-time or monthly (chosen at checkout), straight to feeding the developers' break room. A Support link points at [ihelp247.com/support](https://ihelp247.com/support). All links open in a new tab so nobody loses their work. Next to it sits the checkbox that removes the corner credit from the served page — deliberately together and deliberately free: find, try, see value, let us know to keep going. The `assets/` folder ships the iHelp247 wordmark as dark and light SVGs.
 
 ## Updates & distribution
 
@@ -94,6 +94,9 @@ A plain-language **user guide with a self-diagnosis section** ships in the plugi
 - **docs/index.html** — end users: the plain-language guide + self-diagnosis, shipped in the plugin and hostable via GitHub Pages or any support site (settings-page link is filterable via `ihelp247_wp_intermission_docs_url`).
 
 ## Changelog
+
+### 1.5.3 — 2026-07-26
+- **Support row wired live.** One Square checkout button (any amount, one-time or monthly — chosen at checkout) replaces the two placeholder links, a **Support** link points at ihelp247.com/support, and the row's language now matches the checkout page (*keep the energy drinks and coffee flowing*). No functional changes to the served page or settings behavior.
 
 ### 1.5.2 — 2026-07-25
 - **Documentation and language pass** across the plugin header, both readmes, and the user guide, aligning everything with the published project narrative (*easy by default, powerful when you need it, blocking nobody*). Introduced the **WordPress.org submission build**: an otherwise-identical zip with the GitHub self-updater and `Update URI:` header removed, as the directory requires (this repo's build keeps them). No functional changes to the served page, settings, or behavior.
